@@ -7,7 +7,7 @@ import os
 import onevizion
 
 # Read settings
-with open('settings.json','r') as p:
+with open('settings','r') as p:
 	params = json.loads(p.read())
 
 try:
