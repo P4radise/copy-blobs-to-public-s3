@@ -82,8 +82,8 @@ for cl in Req.jsonData:
 		for blob_data_id in cl[BlobIdList].split():
 			try:
 				copy_from_source_to_dest_bucket(blob_data_id)
-			except:
-				print('could not process {f}'.format(f=blob_data_id))
+			except Exception as e:
+				print('could not process {f} {e}'.format(f=blob_data_id), e=str(e))
 				hasErrors = True
 				continue
 		print (hasErrors)
