@@ -24,6 +24,8 @@ try:
 except Exception as e:
 	raise "Please check settings.json"
 
+print(SourceBucket)
+print(DestBucket)
 client = boto3.client(
 				's3',
 				region_name=awsRegion,
@@ -46,7 +48,7 @@ def copy_from_source_to_dest_bucket(blobDataId):
 
 	obj = s3.Object(DestBucket,fileName)
 
-	# copy_from will pitch a 403 error if file is not in s3 yet
+	# copy_from will pitch a 403/404 error if file is not in s3 yet
 	obj.copy_from(
 		CopySource = {
 			'Bucket': SourceBucket,
@@ -64,7 +66,7 @@ Req.read(filters = {ReadyCheckbox:'1'},
 		sort = {'TRACKOR_KEY':'ASC'}, page = 1, perPage = 1000)
 
 if len(Req.errors)>0:
-	# TODO implement better error handling
+	print(Req.errors)
 	quit(1)
 
 for cl in Req.jsonData:
@@ -83,7 +85,7 @@ for cl in Req.jsonData:
 			try:
 				copy_from_source_to_dest_bucket(blob_data_id)
 			except Exception as e:
-				print('could not process {f} {e}'.format(f=blob_data_id), e=str(e))
+				print('could not process {f} {err}'.format(f=blob_data_id, err=str(e)))
 				hasErrors = True
 				continue
 		print (hasErrors)
@@ -93,25 +95,3 @@ for cl in Req.jsonData:
 				print('could not clear checkbox for {t}'.format(t=cl['TRACKOR_KEY']))
 			else:
 				print(Req.jsonData)
-
-'''
-head = client.head_object(Bucket='dev-mobilitie.onevizion.com', Key='blob_data/1001102281')
-print(head['ResponseMetadata']['HTTPHeaders']['content-type'])
-
-s3 = boto3.resource('s3')
-obj = s3.Object('public-dev-mtrac.mobilitie.com','blob_data/1001102281')
-obj.copy_from(
-	CopySource = {
-		'Bucket': 'dev-mobilitie.onevizion.com',
-		'Key': 'blob_data/1001102281'
-		},
-	MetadataDirective='REPLACE',
-	ContentType=head['ResponseMetadata']['HTTPHeaders']['content-type'],
-	ContentDisposition=head['ResponseMetadata']['HTTPHeaders']['content-disposition']
-	)
-'''
-#obj.set_acl('public-read')
-'''
-'CH_SEND_ITEMS_TO_PUBLIC_S3'
-'CH_CHECKLIST_ITEMS_IDS'
-'''
