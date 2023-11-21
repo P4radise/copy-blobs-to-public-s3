@@ -178,8 +178,8 @@ class AWSS3Service:
         s3_http_headers = self._get_s3_http_headers(file_name)
         obj = self._s3_resource.Object(Bucket=self._destination_bucket,
                                        Key=file_name)
-        obj.copy_from(CopySource = {AWSS3Service.BUCKET_KEY_DICT: self._source_bucket,
-                                    AWSS3Service.KEY_KEY_DICT: file_name},
+        obj.copy_from(CopySource={AWSS3Service.BUCKET_KEY_DICT: self._source_bucket,
+                                  AWSS3Service.KEY_KEY_DICT: file_name},
                       MetadataDirective=AWSS3Service.METADATA_DIRECTIVE,
                       ContentType=s3_http_headers[AWSS3Service.CONTENT_TYPE],
                       ContentDisposition=s3_http_headers[AWSS3Service.CONTENT_DISPOSITION])
