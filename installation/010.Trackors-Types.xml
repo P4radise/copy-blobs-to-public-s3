@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="copy-blobs-to-public-s3_admin" description="" name="010.Trackors-Types.xml" site="https&#x3a;&#x2f;&#x2f;integrations.onevizion.com" ts="" ><XITOR_TYPES>
+<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="copy-blobs-to-public-s3_admin" description="" name="010.Trackors-Types.xml" site="https&#x3a;&#x2f;&#x2f;integrations.onevizion.com" ts="" >
+<XITOR_TYPES impMode="IMPORT_RELATIONS">
  <XITOR_TYPES_ITEM>
   <APPLET_LABEL>
    <T_LABEL>
