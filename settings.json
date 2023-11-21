@@ -1,0 +1,24 @@
+{
+    "ovUrl": "https://***.onevizion.com",
+    "ovAccessKey": "******",
+    "ovSecretKey": "************",
+
+    "BLOBToS3TrackorType": "VHMBLOBTOS3",
+    "BLOBToS3Fields": {
+        "trackorType": "VHMBLOBTOS3_TRACKOR_TYPE",
+        "fieldWithBlobIds": "VHMBLOBTOS3_FIELD_WITH_BLOB_ID",
+        "delimiter": "VHMBLOBTOS3_DELIMITER",
+        "trigger": "VHMBLOBTOS3_TRIGGER",
+        "clearTrigger": "VHMBLOBTOS3_CLEAN_TRIGGER",
+        "status": "VHMBLOBTOS3_ENABLED"
+    },
+
+    "AWS": {
+        "accessKey": "******",
+        "secretKey": "************",
+        "region": "us-east-1",
+
+        "sourceBucket": "***.onevizion.com",
+        "destinationBucket": "public-***.onevizion.com"
+    }
+}

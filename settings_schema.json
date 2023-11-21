@@ -1,0 +1,84 @@
+{
+    "type": "object",
+    "properties": {
+        "ovUrl": {
+            "type": "string",
+            "pattern": "^(https|http)://.*[^/]$"
+        },
+        "ovAccessKey": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+        },
+        "ovSecretKey": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+        },
+        "BLOBToS3TrackorType": {
+            "type": "string",
+            "minLength": 1
+        },
+        "BLOBToS3Fields" : {
+            "type": "object",
+            "properties": {
+                "trackorType": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "fieldWithBlobIds": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "delimiter": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "trigger": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "clearTrigger": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "status": {
+                    "type": "string",
+                    "minLength": 1
+                }
+            },
+            "required": ["trackorType", "fieldWithBlobIds", "delimiter",
+                         "trigger", "clearTrigger", "status"]
+        },
+        "AWS" : {
+            "type": "object",
+            "properties": {
+                "accessKey": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "secretKey": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "region": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "sourceBucket": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "destinationBucket": {
+                    "type": "string",
+                    "minLength": 1
+                }
+            },
+            "required": ["accessKey", "secretKey", "region",
+                         "sourceBucket", "destinationBucket"]
+        }
+    },
+    "required": ["ovUrl", "ovAccessKey", "ovSecretKey",
+                 "BLOBToS3TrackorType", "BLOBToS3Fields",
+                 "AWS"]
+}

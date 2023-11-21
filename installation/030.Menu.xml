@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="copy-blobs-to-public-s3_admin" description="" name="030.Menu.xml" site="https&#x3a;&#x2f;&#x2f;integrations.onevizion.com" ts="" ><MENU>
+ <MENU_ITEM>
+  <APPLICATION_ID>10017654</APPLICATION_ID>
+  <NAME>BLOB To S3</NAME>
+  <LABEL>
+   <T_LABEL>
+    <APP_LANG_ID>0</APP_LANG_ID>
+    <APP_LABEL_ID>-20080</APP_LABEL_ID>
+    <LABEL_TEXT>BOTO To S3</LABEL_TEXT>
+   </T_LABEL>
+   <T_LABEL>
+    <APP_LANG_ID>1</APP_LANG_ID>
+    <APP_LABEL_ID>-20080</APP_LABEL_ID>
+    <LABEL_TEXT>BLOB To S3</LABEL_TEXT>
+   </T_LABEL>
+   <T_LABEL>
+    <APP_LANG_ID>5</APP_LANG_ID>
+    <APP_LABEL_ID>-20080</APP_LABEL_ID>
+    <LABEL_TEXT>BOTO To S3</LABEL_TEXT>
+   </T_LABEL>
+  </LABEL>
+  <PROGRAM_ID>1002657</PROGRAM_ID>
+  <ICON>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; id=&quot;svgdefault&quot; name=&quot;Default&quot; viewBox=&quot;0 0 20 20&quot; width=&quot;20px&quot; height=&quot;20px&quot; fill=&quot;#42A5F5&quot; class=&quot;icon&quot;&gt;
+        &lt;path d=&quot;M20,4c0-1.7-1.3-3-3-3H3C1.3,1,0,2.3,0,4v4h1v8c0,1.7,1.3,3,3,3h12c1.7,0,3-1.3,3-3V8h1V4z M2,4c0-0.6,0.4-1,1-1h14&amp;#10;            c0.6,0,1,0.4,1,1v2H2V4z M17,16c0,0.6-0.4,1-1,1H4c-0.6,0-1-0.4-1-1V8h14V16z&quot;/&gt;
+        &lt;rect x=&quot;8&quot; y=&quot;10&quot; width=&quot;4&quot; height=&quot;2&quot;/&gt;
+    &lt;/svg&gt;</ICON>
+  <MENU_XREFS>
+   <T_MENU_XREF>
+    <APPLICATION_ID>10017654</APPLICATION_ID>
+    <IS_VISIBLE>1</IS_VISIBLE>
+    <IS_MENU_ITEM>10018503</IS_MENU_ITEM>
+    <ORDER_NUMBER>1</ORDER_NUMBER>
+    <PROGRAM_ID>1002657</PROGRAM_ID>
+    <MENU_ITEMS>
+     <T_MENU_ITEM>
+      <URL>grid/SimpleGrid.do?ModuleName=TRACKOR_BROWSER</URL>
+      <HIDE_FILTER>0</HIDE_FILTER>
+      <HIDE_VIEW>0</HIDE_VIEW>
+      <MENU_ITEMS_TYPE_ID>0</MENU_ITEMS_TYPE_ID>
+      <LABELS>
+       <T_LABEL>
+        <APP_LANG_ID>0</APP_LANG_ID>
+        <APP_LABEL_ID>-20081</APP_LABEL_ID>
+        <LABEL_TEXT>BLOB to S3</LABEL_TEXT>
+       </T_LABEL>
+       <T_LABEL>
+        <APP_LANG_ID>1</APP_LANG_ID>
+        <APP_LABEL_ID>-20081</APP_LABEL_ID>
+        <LABEL_TEXT>BLOB to S3</LABEL_TEXT>
+       </T_LABEL>
+       <T_LABEL>
+        <APP_LANG_ID>5</APP_LANG_ID>
+        <APP_LABEL_ID>-20081</APP_LABEL_ID>
+        <LABEL_TEXT>BLOB to S3</LABEL_TEXT>
+       </T_LABEL>
+      </LABELS>
+      <MENU_ITEM_ID>10018503</MENU_ITEM_ID>
+      <TRACKOR_TYPE>VHMBLOBTOS3</TRACKOR_TYPE>
+      <PROGRAM_ID>1002657</PROGRAM_ID>
+      <MODULE_NAME>TRACKOR_BROWSER</MODULE_NAME>
+      <HIDE_PARENTS_CHILDREN>0</HIDE_PARENTS_CHILDREN>
+      <TEASER_LABELS/>
+      <WIDGET_PARAMS/>
+     </T_MENU_ITEM>
+    </MENU_ITEMS>
+   </T_MENU_XREF>
+  </MENU_XREFS>
+  <BPD_ITEMS/>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>8</COMPONENT_ID>
+    <OBJECT_ID>10017654</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>101643</COMPONENTS_PACKAGE_ID>
+    <NAME>VHMBLOBTOS3</NAME>
+    <PROGRAM_ID>1002657</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+ </MENU_ITEM>
+</MENU>
+</COMPONENTS>
